@@ -1,0 +1,282 @@
+/*css reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*------------custom css------------*/
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.loading{
+	position: fixed;
+	top: 0;bottom: 0;left: 0;right: 0;
+	background-color: rgba(255,255,255,0.5);
+	z-index: 1500;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+
+}
+.loading-msg{
+	padding: 30px;
+	border:3px solid grey;
+	background-color: #fff;
+}
+.main-menu{
+	position: absolute;
+	left: 0px;
+	width: 450px;
+	height: 100%;
+	box-shadow: 3px 3px 15px;
+	box-sizing: border-box;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	transition: left 1s;
+	z-index: 1001;
+}
+.menu-toggle{
+	left: -450px;
+	box-shadow: none;
+}
+.fa-chevron-left{
+	transition: transform 1s;
+}
+.menu-toggle .fa-chevron-left{
+	transform: scaleX(-1);
+}
+.toggle-btn{
+	position: absolute;
+	right: -30px;
+	bottom: 0px;
+	width: 30px;
+	padding: 10px 0px;
+	text-align: center;
+	background-color: #73C0D8;
+	font-size: 2rem;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+}
+.toggle-btn:hover{
+	background-color: #ade6f7;
+}
+.menu-header{
+	position: relative;
+	background-color: #73C0D8;
+	padding: 10px;
+}
+.date-detail{
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	padding-bottom: 10px;
+	color: #fff;
+}
+.current-week{
+	font-size:2.5rem;
+	padding-right: 20px;
+}
+.header-right{
+	text-align: right;
+}
+.current-date{
+	margin-bottom: 10px;
+	font-size: 1.5rem;
+}
+.id-highlight{
+	color: #FFF126;
+	font-size: 1.5rem;
+}
+.area-list{
+	display: flex;
+	flex-direction:column;
+}
+.city-list{
+	padding: 10px 5px;
+	margin-bottom: 10px;
+	border: none;
+}
+.dist-list{
+	padding: 10px 5px;
+	border: none;
+}
+.shop-list{
+	overflow-y: auto;
+}
+.shop-item{
+	position: relative;
+	padding: 20px 10px;
+	display: flex;
+	flex-direction: column;
+}
+.shop-item:hover{
+	background-color: #97CBFF;
+}
+.shop-item+.shop-item::before{
+	content: "";
+	position: absolute;
+	top: -1px;right: 5%;left: 5%;
+	border: #666666 solid 2px;
+}
+.location-btn{
+	width: 25px;
+	height: 41px;
+	background-image: url(../img/marker-icon.png);
+	background-position: center center;
+	position: absolute;
+	right: 15px;top: 10px;
+}
+.location-btn:hover{
+	cursor: pointer;
+}
+.shop-title{
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 15px;
+	width: 100%;
+}
+.shop-info{
+	color: #666666;
+}
+.shop-item>p+p{
+ 	margin-top: 10px;
+}
+.mask-inventory{
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.pills{
+	margin: 0 5px;
+	padding: 10px 5px;
+	width: 100%;
+	border-radius: 20px;
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-around;
+	align-items: center;
+	color: #fff;
+}
+.pill-grey{
+	background-color: #A5A5A5;
+}
+.pill-red{
+	background-color: #f3574c;
+}
+.pill-green{
+	background-color: #2cda00;
+}
+.pop-item{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.popup-title{
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+.popup-info{
+	font-size: 1rem;
+}
+.popup-item .pills p{
+	margin: auto;
+	font-size: 1.2rem;
+}
+.container{
+	width: 100%;
+	height: 100%;
+}
+#map{
+    width: 100%;
+	height: 100%;
+}
+/* maker cluster default css */
+.marker-cluster-small {
+	background-color: rgba(181, 226, 140, 0.6);
+	}
+	.marker-cluster-small div {
+	background-color: rgba(110, 204, 57, 0.6);
+	}
+	
+	.marker-cluster-medium {
+	background-color: rgba(241, 211, 87, 0.6);
+	}
+	.marker-cluster-medium div {
+	background-color: rgba(240, 194, 12, 0.6);
+	}
+	
+	.marker-cluster-large {
+	background-color: rgba(253, 156, 115, 0.6);
+	}
+	.marker-cluster-large div {
+	background-color: rgba(241, 128, 23, 0.6);
+	}
+	
+	.marker-cluster {
+	background-clip: padding-box;
+	border-radius: 20px;
+	}
+	.marker-cluster div {
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+	margin-top: 5px;
+	
+	text-align: center;
+	border-radius: 15px;
+	font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	}
+	.marker-cluster span {
+	line-height: 30px;
+	}
+	
+	.container.leaflet-right {
+	right:0px;
+	}

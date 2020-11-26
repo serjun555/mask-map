@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>口罩地圖</title>
+	<link rel="icon" href="img/mask-icon.png">
+	<!-- custom CSS -->
+	<link rel="stylesheet" href="css/all.css">
+	<!-- fontawesome 5.14 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+	<!-- Leaflet CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css"></link> 
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css"></link>
+</head>
+<body>
+	<div class="loading">
+		<div class="loading-msg">
+			<p>資料讀取中</p>
+		</div>
+	</div>
+	<div class="main-menu">
+		<div class="menu-header">
+			<div class="toggle-btn">
+				<i class="fas fa-chevron-left"></i>
+			</div>
+			<div class="date-detail">
+				<div class="header-left">
+					<h2 class="current-week"></h2>
+				</div>
+				<div class="header-right">
+					<div class="current-date"></div>
+					<div class="id-check">
+						<p>身分證末碼為<span class="id-highlight"></span>可購買</p>
+					</div>
+				</div>
+			</div>
+			<div class="area-list">
+					<select name="city" class="city-list">
+						<option disabled selected>請選擇縣市</option>
+					</select>
+					<select name="district" class="dist-list">
+						<option disabled selected>請選擇區域</option>
+					</select>
+			</div>
+		</div>
+		<ul class="shop-list">
+		</ul>
+	</div>
+	<div class="container">
+		<div id="map"></div>
+	</div>
+	
+
+
+
+	
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+   <script src='all.js'></script>
+</body>
+</html>
