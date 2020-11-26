@@ -240,9 +240,7 @@ function jumpToShop(jumpBtn){
 			let lng=e.target.dataset.lng;
 			map.setView([lat,lng], 20);
 			markers.eachLayer(function (layer) {
-                // 宣告變數，並使用 getLatLng 的方法，取得 layer（marker） 的經緯
                 const layerLatLng = layer.getLatLng();
-                    // 用判斷式比對經緯度，如果 layer（marker）的經緯度與點擊目標的經
                     if (layerLatLng.lat == lat && layerLatLng.lng == lng) {
                         layer.openPopup();
 					}
@@ -253,25 +251,4 @@ function jumpToShop(jumpBtn){
 	
 }
 
-
-
-
-
-
-
-
-
 init();
-
-
-// function showNum(e){
-// 	let num;
-// 	if(e.target.nodeName=="LI"){
-// 		num=e.target.dataset.num;
-// 	}else if(e.target.parentNode.nodeName=="LI"){
-// 		num=e.target.parentNode.dataset.num
-// 	}else{
-// 		return;
-// 	}
-// 	console.log(num)
-// }
